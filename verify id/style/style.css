@@ -1,0 +1,311 @@
+/* 1. Base Container Styling */
+.custom-pill-input {
+    border: 1px solid #cccccc;
+    border-radius: 10px; 
+    overflow: hidden;    
+    height: 35px;       
+    transition: all 0.2s ease-in-out; 
+}
+
+/* Base REG Addon Styling */
+.custom-pill-input .custom-reg-addon {
+    background-color: #f8f9fa !important; /* Force background color */
+    color: #bdbdbd !important;            /* Default gray text */
+    font-weight: bold;
+    padding: 0 20px;
+    border: none !important;
+    border-right: 2px solid #bdbdbd !important; /* Default thick line */
+    border-radius: 0;
+    display: flex;
+    align-items: center;
+    transition: all 0.2s ease-in-out;
+}
+
+/* Base Input Styling */
+.custom-pill-input .custom-field {
+    border: none !important;
+    border-radius: 0;
+    padding-left: 15px;
+    box-shadow: none !important;
+}
+
+/* ========================================================
+   2. FOCUS & HOVER STATES (Everything turns green together)
+   ======================================================== */
+
+/* Triggered when user hovers OR clicks into the field */
+.custom-pill-input:hover,
+.custom-pill-input:focus-within {
+    border-color: #1a5c2e !important; 
+    box-shadow: 0 0 8px rgba(26, 92, 46, 0.2); 
+}
+
+/* Targets the addon text and divider line on hover OR focus */
+.custom-pill-input:hover .custom-reg-addon,
+.custom-pill-input:focus-within .custom-reg-addon {
+    color: #1a5c2e !important;                  /* Dark green text */
+    border-right: 2px solid #1a5c2e !important; /* Dark green vertical line */
+}
+
+/* 3. Clean up inner placeholder states */
+.custom-pill-input .custom-field:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.custom-pill-input .custom-field:focus::placeholder {
+    opacity: 0;
+
+}
+/* Force the placeholder text to completely disappear on focus */
+.custom-pill-input .custom-field:focus::placeholder {
+    opacity: 0 !important;
+    visibility: hidden !important;
+    color: transparent !important;
+}
+/* Triggers the moment the input is active/clicked */
+.custom-pill-input .custom-field:focus {
+    color: #000000; /* Ensures your typed text stays visible */
+}
+.custom-card2{
+    width: 100%;
+  max-width: 33.065rem;
+  min-height: 49.857rem;
+}
+.custom-input3{
+  
+  height: 40px;
+  font-size: 0.95rem;
+  border-radius: 12px;
+}
+
+.custom-input3::placeholder{
+      font-size: 0.95rem;
+}
+/* Custom style for the dashed border since Bootstrap doesn't have a default dashed utility */
+    .border-dashed {
+      border: 2px dashed #cccccc !important;
+    }
+    /* Subtle hover effect for better user experience */
+    .scan-btn-container:hover {
+      background-color: #fdfdfd;
+      cursor: pointer;
+    }
+    
+    .custom-progress-track {
+        background-color: #ffffff !important; 
+        height: 5px; 
+        border-radius: 50px;
+      }
+      .stat-title {
+        font-size: 0.8rem;
+        letter-spacing: 0.05rem;
+        color: #a0aab0;
+        text-transform: uppercase;
+        font-weight: 600;
+      }
+      .stat-num {
+        font-size: 1.4rem;
+        font-weight: 700;
+        line-height: 1.2;
+      }
+
+      .card-custom2 {
+     width: 100%;
+    max-width: 25.065rem;
+  
+}
+.container-card{
+  
+    padding-left: 13%;
+    padding-right: 8%;
+}
+
+
+    /* Base Filter Pill Styling */
+.filter-btn {
+  background-color: transparent;
+  color: #555555;
+  border: 1.5px solid #888888;
+  border-radius: 20px; /* Highly rounded pill appearance matching screenshot */
+  padding: 7px 14px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Hover State */
+.filter-btn:hover {
+  background-color: #f4f5f6;
+}
+
+/* Default Active Style (All & Verified Green) */
+.filter-btn.active {
+  background-color: #1a5c2e; /* Your brand dark green */
+  color: #ffffff;
+  border-color: #1a5c2e;
+}
+
+/* Specific Active Style override for the Unverified pill when clicked */
+.filter-btn[data-filter="unverified"].active {
+  background-color: #c92a2a; /* Red alert tone from screenshot */
+  color: #ffffff;
+  border-color: #c92a2a;
+}
+
+/* Smooth Fade and Entry for list filtering items */
+.check-item {
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  opacity: 1;
+  transform: scale(1);
+}
+
+.check-item.d-none {
+  display: none !important;
+  opacity: 0;
+  transform: scale(0.98);
+}
+
+.custom-card3{
+    width: 100%;
+  max-width: 26.065rem;
+  min-height: 49.857rem;
+}
+.card-container1{
+  padding-left: 13%;
+    padding-right: 8%;
+}
+
+
+
+:root {
+    --brand-green: #0a5c36;
+    --brand-light-green: #e1efe9;
+    --text-muted: #adb5bd;
+}
+
+/* Stepper Custom Layout */
+.stepper-item {
+    display: flex;
+    align-items: center;
+    z-index: 2;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+.step-num {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--text-muted);
+    background-color: #fff;
+    color: var(--text-muted);
+}
+.step-done .step-num, .step-active .step-num {
+    background-color: var(--brand-green);
+    color: white;
+    border-color: var(--brand-green);
+}
+.step-done .step-text, .step-active .step-text {
+    color: var(--brand-green);
+    font-weight: bold;
+}
+.step-todo .step-text {
+    color: var(--text-muted);
+}
+.stepper-line {
+    flex-grow: 1;
+    height: 2px;
+    background-color: #dee2e6;
+    margin: 0 15px;
+    z-index: 1;
+}
+.stepper-line.active-line {
+    background-color: var(--brand-green);
+}
+
+/* Custom Conic Spinner */
+.custom-spinner {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: conic-gradient(rgba(10, 92, 54, 0.1) 25%, var(--brand-green));
+    -webkit-mask: radial-gradient(farthest-side, transparent 88%, #000 90%);
+    mask: radial-gradient(farthest-side, transparent 88%, #000 90%);
+    animation: spin 1s linear infinite;
+}
+@keyframes spin {
+    100% { transform: rotate(360deg); }
+}
+
+/* Dynamic List Items States */
+.loading-step {
+    color: var(--text-muted);
+    transition: all 0.4s ease;
+    display: flex;
+    align-items: center;
+    font-size: 1.05rem;
+}
+.status-icon {
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--text-muted);
+    border-radius: 50%;
+    display: inline-block;
+    flex-shrink: 0;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+/* Active State: bold, green ring */
+.loading-step.active {
+    color: #212529;
+    font-weight: 500;
+}
+.loading-step.active .status-icon {
+    border-color: var(--brand-green);
+}
+
+/* Done State: bold, filled green circle with an icon */
+.loading-step.done {
+    color: #212529;
+}
+.loading-step.done .status-icon {
+    border-color: var(--brand-green);
+    background-color: transparent;
+}
+.loading-step.done .status-icon::after {
+    content: "✓";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--brand-green);
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+
+
+.progress-ring {
+  border: 5px solid rgba(156, 156, 156, 0.676);
+
+  border-top: 5px solid #1a5c2e;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verifyd Loading State</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-light d-flex align-items-center justify-content-center min-vh-100">
+
+    <div class="container" style="max-width: 700px;">
+        <div class="text-start mb-5 ps-4">
+            <h4 class="fw-bold text-success">✓ verifyd</h4>
+        </div>
+
+        <div class="d-flex justify-content-between align-items-center mb-5 position-relative stepper-wrapper">
+            <div class="stepper-item step-done">
+                <span class="step-num">1</span>
+                <span class="step-text d-none d-md-inline ms-2">Enter details</span>
+            </div>
+            <div class="stepper-line active-line"></div>
+            <div class="stepper-item step-active">
+                <span class="step-num">2</span>
+                <span class="step-text d-none d-md-inline ms-2">Checking database</span>
+            </div>
+            <div class="stepper-line"></div>
+            <div class="stepper-item step-todo">
+                <span class="step-num">3</span>
+                <span class="step-text d-none d-md-inline ms-2">View Result</span>
+            </div>
+        </div>
+
+        <div class="card border-0 shadow-sm p-5 text-center mx-auto bg-white rounded-4" style="max-width: 500px;">
+            
+            <div class="d-flex justify-content-center mb-4">
+                <div class="custom-spinner"></div>
+            </div>
+
+            <h3 class="fw-bold text-success mb-2" id="target-code">A1 - 1234</h3>
+            <p class="text-muted small mb-4">Querying NAFDAC registration database...</p>
+
+            <ul class="list-unstyled text-start mx-auto vs-list" style="max-width: 320px;">
+                <li class="mb-3 loading-step active" id="step-1">
+                    <span class="status-icon me-3"></span>
+                    <span class="step-label">Validating number format</span>
+                </li>
+                <li class="mb-3 loading-step" id="step-2">
+                    <span class="status-icon me-3"></span>
+                    <span class="step-label">Searching product registry</span>
+                </li>
+                <li class="mb-3 loading-step" id="step-3">
+                    <span class="status-icon me-3"></span>
+                    <span class="step-label">Verifying company records</span>
+                </li>
+                <li class="mb-3 loading-step" id="step-4">
+                    <span class="status-icon me-3"></span>
+                    <span class="step-label">Checking expiry and status</span>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
